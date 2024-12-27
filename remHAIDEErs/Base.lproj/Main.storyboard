@@ -38,6 +38,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="dayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aq9-zN-nso"/>
+                                            <segue destination="DH2-Ve-OAD" kind="show" id="kow-XC-lt3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8X-ea-mRr">
@@ -75,7 +76,6 @@
                     <navigationItem key="navigationItem" id="saW-4u-ssq"/>
                     <connections>
                         <outlet property="startScreenLabel" destination="wjT-Gd-ME5" id="c5h-mh-4tY"/>
-                        <segue destination="DH2-Ve-OAD" kind="show" id="xf1-fI-SiC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -89,14 +89,28 @@
                     <view key="view" contentMode="scaleToFill" id="frE-M7-Uga">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ea6-Pw-N6w">
+                                <rect key="frame" x="76" y="362" width="241" height="128"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ubv-FH-ZxA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ubv-FH-ZxA" firstAttribute="trailing" secondItem="ea6-Pw-N6w" secondAttribute="trailing" constant="76" id="0xR-Jl-dcr"/>
+                            <constraint firstItem="ubv-FH-ZxA" firstAttribute="bottom" secondItem="ea6-Pw-N6w" secondAttribute="bottom" constant="328" id="aq6-wO-j2p"/>
+                            <constraint firstItem="ea6-Pw-N6w" firstAttribute="top" secondItem="ubv-FH-ZxA" secondAttribute="top" constant="259" id="bGh-09-Lui"/>
+                            <constraint firstItem="ea6-Pw-N6w" firstAttribute="leading" secondItem="ubv-FH-ZxA" secondAttribute="leading" constant="76" id="bnr-K3-snF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bdr-Ub-heT"/>
+                    <connections>
+                        <outlet property="detailView" destination="ea6-Pw-N6w" id="we7-fg-F7d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7L-iF-03l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1547" y="4"/>
+            <point key="canvasLocation" x="1545.8015267175572" y="3.5211267605633805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nPN-Y3-uiI">
