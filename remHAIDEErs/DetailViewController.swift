@@ -9,12 +9,14 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    
     @IBOutlet weak var detailView: UIImageView!
+    
+    var receivedImage = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        detailView.image = receivedImage
         /*
          // MARK: - Navigation
          
